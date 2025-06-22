@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- swiper js -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
+    <!-- css -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
@@ -29,12 +33,11 @@
                         <a href=""><i class="fa-solid fa-location-dot"></i>32/b AJC Bose Road kolkata 700002</a>
                     </div>
                     <div class="top-nav-right">
-                        <a href="">Language <i class="fa-solid fa-greater-than"
-                                style="transform: rotate(90deg);font-size: 12px;"></i></a>
+                        <p>Language <i class="fa-solid fa-greater-than" style="transform: rotate(90deg);"></i></p>
                         <p>|</p>
-                        <a href=""><img src="./img/Facebook.png" alt=""></a>
-                        <a href=""><img src="./img/Twitter Circled.png" alt=""></a>
-                        <a href=""><img src="./img/LinkedIn Circled.png" alt=""></a>
+                        <a class="facebook" href=""><img src="./img/Facebook.png" alt=""></a>
+                        <a class="twitter" href=""><img src="./img/Twitter Circled.png" alt=""></a>
+                        <a class="linkedin" href=""><img src="./img/LinkedIn Circled.png" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -47,21 +50,22 @@
                             <img src="./img/logo.png" alt="">
                         </a>
                     </div>
-                    <div class="hamberger" id="hamberger"><i class="fa-solid fa-bars"></i></div>
+                    <div class="hamberger" onclick="openNav()"><i class="fa-solid fa-bars"></i></div>
                     <div class="nav-content">
                         <ul>
                             <li><a href="#">Home</a></li>
                             <li><a href="#service-sec">Services</a></li>
                             <li><a href="#about-sec">About us</a></li>
-                            <li><a href="#plan-sec">Shop</a></li>
+                            <li><a href="#plan">Shop</a></li>
                             <li><a href="">Contact us</a></li>
                         </ul>
                         <div class="nav-btn">
                             <a href=""><i class="fa-solid fa-bag-shopping"></i></a>
                             <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
-                            <a href="">Sign Up</a>
+                            <a href="" data-fancybox="">Sign Up</a>
                         </div>
-                        <div class="close-bar"><i class="fa-solid fa-xmark"></i></div>
+                        <div href="javascript:void(0)" class="close-bar" onclick="closeNav()"><i
+                                class="fa-solid fa-xmark"></i></div>
                     </div>
                 </div>
             </div>
@@ -72,15 +76,18 @@
 
     <section class="banner-sec">
         <div class="container">
-            <div class="banner-main">
-                <div class="cmn-top-head">
+            <div class="banner-main" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1200">
+                <div class="cmn-top-head" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1200">
                     <div></div>
                     <p>Welcome to EV NEXT</p>
                     <div></div>
                 </div>
-                <h1>Drive <span>Electric</span><br>We've Got You Covered.</h1>
-                <p>Discover nearby charging stations, book services, and manage your EV with ease.</p>
-                <a href="">Book Now</a>
+                <h1 data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1200">Drive
+                    <span>Electric</span><br>We've Got You Covered.
+                </h1>
+                <p data-aos="fade-up">Discover nearby charging stations, book services, and manage your EV with ease.
+                </p>
+                <a href="#booking-sec" data-aos="fade-up">Book Now</a>
             </div>
         </div>
     </section>
@@ -90,21 +97,24 @@
     <section class="about-sec" id="about-sec">
         <div class="container">
             <div class="row">
-                <div class="col-6">
+                <div class="col-6" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-sine">
                     <div class="about-left">
-                        <div class="about-left-top">
-                            <h3>12+</h3>
+                        <div class="about-left-top" data-aos="fade-right" data-aos-duration="1000"
+                            data-aos-easing="ease-in-sine">
+                            <h3 class="cmn-number-text counter" data-target="12">0+</h3>
                             <p>Years of Practicing</p>
                         </div>
-                        <div class="about-img">
+                        <div class="about-img" data-aos="fade-right" data-aos-duration="1000"
+                            data-aos-easing="ease-in-sine">
                             <img src="./img/about-img.png" alt="">
                         </div>
                         <div></div>
                         <div></div>
-                        <a href=""><img src="./img/play-btn.png" alt=""></a>
+                        <a href="https://youtu.be/7X8II6J-6mU?si=Kc6yyEdG73lVZrcE" data-fancybox="gallery"><img
+                                src="./img/play-btn.png" alt=""></a>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-6" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-in-sine">
                     <div class="about-right">
                         <div class="cmn-top-head">
                             <div></div>
@@ -152,19 +162,21 @@
 
     <section class="service-sec" id="service-sec">
         <div class="container">
-            <div class="service-top">
-                <div class="cmn-top-head">
+            <div class="service-top" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
+                <div class="cmn-top-head" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
                     <div></div>
                     <p>What We're Offering</p>
                     <div></div>
                 </div>
-                <h2 class="cmn-head">Most <span>Reliable</span> EV Repair & Services</h2>
-                <p class="cmn-para">EV NEXT provides expert maintenance , fast repairs & hassle-free charging to keep
+                <h2 class="cmn-head" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">Most
+                    <span>Reliable</span> EV Repair & Services</h2>
+                <p class="cmn-para" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">EV NEXT
+                    provides expert maintenance , fast repairs & hassle-free charging to keep
                     your electric journey smooth and sustainable</p>
             </div>
             <div class="service-bottom">
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-3" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1800">
                         <div class="service-card" style="background-color: black">
                             <div class="top-serv-card">
                                 <h3>01</h3>
@@ -178,12 +190,13 @@
                         </div>
                     </div>
                     <div class="col-3">
-                        <div class="service-card">
+                        <div class="service-card" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                            data-aos-duration="2000">
                             <div class="top-serv-card">
                                 <h3>02</h3>
                                 <img src="./img/EV Battery.png" alt="">
                             </div>
-                             <div></div>
+                            <div></div>
                             <h4 style="color: black">Battery Services</h4>
                             <p style="color: black">Battery replacement & upgrade, health monitoring and charging
                                 optimization</p>
@@ -191,19 +204,20 @@
                         </div>
                     </div>
                     <div class="col-3">
-                        <div class="service-card">
+                        <div class="service-card" data-aos="flip-right" data-aos-easing="ease-out-cubic"
+                            data-aos-duration="2200">
                             <div class="top-serv-card">
                                 <h3>03</h3>
                                 <img src="./img/Charging Station.png" alt="">
                             </div>
-                             <div></div>
+                            <div></div>
                             <h4 style="color: black">Charging Installation</h4>
                             <p style="color: black">Home charging station install & charging subscription plan with
                                 charging optimization </p>
                             <a href="">View details</a>
                         </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-3" data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="2400">
                         <div class="service-card" style="background-color: black">
                             <div class="top-serv-card">
                                 <h3>04</h3>
@@ -223,14 +237,17 @@
 
     <!-- achive section -->
 
-    <section class="achive-sec" id="achive-sec">
+    <section class="achive-sec" id="achive-sec"data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="300"
+     data-aos-offset="0">
         <div class="container">
             <div class="row">
                 <div class="col-3">
                     <div class="achive-main">
                         <img src="./img/Automatic Car Wash.png" alt="">
                         <div>
-                            <h2>1000+</h2>
+                            <h2 class="cmn-number-text counter" data-target="1000">0k</h2>
                             <p>Vehicle repairs</p>
                         </div>
                     </div>
@@ -239,7 +256,7 @@
                     <div class="achive-main">
                         <img src="./img/Service.png" alt="">
                         <div>
-                            <h2>12+</h2>
+                            <h2 class="cmn-number-text counter" data-target="12">0+</h2>
                             <p>Years experience</p>
                         </div>
                     </div>
@@ -248,7 +265,7 @@
                     <div class="achive-main">
                         <img src="./img/Prize.png" alt="">
                         <div>
-                            <h2>25+</h2>
+                            <h2 class="cmn-number-text counter" data-target="25">0+</h2>
                             <p>Winning awards</p>
                         </div>
                     </div>
@@ -257,7 +274,7 @@
                     <div class="achive-main">
                         <img src="./img/People.png" alt="">
                         <div>
-                            <h2>100+</h2>
+                            <h2 class="cmn-number-text counter" data-target="100">0+</h2>
                             <p>Team members</p>
                         </div>
                     </div>
@@ -272,21 +289,23 @@
         <div class="container">
             <div class="row">
                 <div class="col-6">
-                    <div class="choose-left">
-                        <div class="cmn-top-head">
+                    <div class="choose-left" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
+                        <div class="cmn-top-head" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
                             <div></div>
                             <p style="color: black;">WHY CHOOSE US</p>
                             <div></div>
                         </div>
-                        <h2 class="cmn-head"><span>Charging Up</span> Convenience , One Service at a Time</h2>
-                        <p class="cmn-para">You'd think after creating the world's largest and most open EV charging
+                        <h2 class="cmn-head" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000"><span>Charging Up</span> Convenience , One Service at a Time</h2>
+                        <p class="cmn-para" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">You'd think after creating the world's largest and most open EV charging
                             network we’d be
                             satisfied, but you'd be wrong, there’s still much more we can do together. After more than a
                             decade and millions of charges delivered, we’re still pioneering new ways to make electric
                             mobility the easy choice.
                         </p>
-                        <div class="video-btn">
-                            <img src="./img/play-btn.png" alt="">
+                        <div class="video-btn" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
+                            <div>
+                                <img src="./img/play-btn.png" alt="">
+                            </div>
                             <p>VIDEO SHOWCASE</p>
                         </div>
                     </div>
@@ -294,7 +313,7 @@
                 <div class="col-6">
                     <div class="choose-right">
                         <div>
-                            <div class="card-1" style="color: #ffffff;">
+                            <div  class="card-1" style="color: #ffffff;">
                                 <img src="./img/Online Support.png" alt="">
                                 <h3>24/7 Support</h3>
                                 <p>Get instant support 24 / 7 anytime anywhere</p>
@@ -325,16 +344,16 @@
 
     <!-- booking section -->
 
-    <section class="booking-sec">
+    <section class="booking-sec" id="booking-sec">
         <div class="container">
             <div class="row">
                 <div class="col-6">
-                    <div class="booking-left">
-                        <h2 class="cmn-head">Don't Worry ,<span> Just 3 Simple</span> Steps For Appointment</h2>
-                        <p class="cmn-para">At EV NEXT, we're driving the future of electric mobility. As a stop
+                    <div class="booking-left" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
+                        <h2 class="cmn-head" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1200">Don't Worry ,<span> Just 3 Simple</span> Steps For Appointment</h2>
+                        <p class="cmn-para" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1200">At EV NEXT, we're driving the future of electric mobility. As a stop
                             destination for all your EV needs .
                         </p>
-                        <div>
+                        <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
                             <img src="./img/vertical-img.png" alt="">
                             <div>
                                 <a href="">
@@ -373,7 +392,9 @@
                     </div>
                 </div>
                 <div class="col-6">
-                    <div class="booking-right">
+                    <div class="booking-right"data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
                         <div class="booking-card">
                             <h4>Book An Appointment</h4>
                             <img style="margin-bottom: 20px;margin-top: 10px;" src="./img/Rectangle.png" alt="">
@@ -418,16 +439,19 @@
 
     <section class="process-sec">
         <div class="container">
-            <div class="process-top">
-                <div class="cmn-top-head">
+            <div class="process-top"data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1400">
+                <div class="cmn-top-head"data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1400">
                     <div></div>
                     <p style="color: #000000;">PROCESS</p>
                     <div></div>
                 </div>
-                <h2 class="cmn-head">How we works</h2>
+                <h2 class="cmn-head"data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1400">How we works</h2>
                 <img src="./img/Rectangle.png" alt="">
             </div>
-            <div class="bottom-process">
+            <div class="bottom-process"data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="500"
+     data-aos-offset="0">
                 <div class="row">
                     <div class="col-3">
                         <div class="proces-card">
@@ -436,15 +460,12 @@
                                 <div>
                                     <img src="./img/Event-acc.png" alt="">
                                     <div>
-                                        <p>02</p>
+                                        <p>01</p>
                                     </div>
                                 </div>
                             </div>
                             <h3>Appointment</h3>
-                            <p>Schedule a service online
-                                through our app or web-
-                                site. Choose date , time &
-                                location.</p>
+                            <p>Schedule a service online through our app or web-site. Choose date , time & location.</p>
                         </div>
                     </div>
                     <div class="col-3">
@@ -471,7 +492,7 @@
                                 <div>
                                     <img src="./img/Event-acc.png" alt="">
                                     <div>
-                                        <p>02</p>
+                                        <p>03</p>
                                     </div>
                                 </div>
                             </div>
@@ -488,7 +509,7 @@
                                 <div>
                                     <img src="./img/Event-acc.png" alt="">
                                     <div>
-                                        <p>02</p>
+                                        <p>04</p>
                                     </div>
                                 </div>
                             </div>
@@ -524,24 +545,21 @@
                                     <img src="./img/Charging Station-black.png" alt="">
                                     <img src="./img/01.png" alt="">
                                 </div>
-                                <p>Find
-                                    Station</p>
+                                <p>Find Station</p>
                             </div>
                             <div>
                                 <div>
                                     <img src="./img/Qr Code.png" alt="">
                                     <img src="./img/02.png" alt="">
                                 </div>
-                                <p>Scan
-                                    Code</p>
+                                <p>Scan Code</p>
                             </div>
                             <div>
                                 <div>
                                     <img src="./img/Plug.png" alt="">
                                     <img src="./img/03.png" alt="">
                                 </div>
-                                <p>Plug
-                                    In EV</p>
+                                <p>Plug In EV</p>
                             </div>
                         </div>
                     </div>
@@ -572,60 +590,63 @@
 
     <!-- price plan section -->
 
-    <section class="plan-sec">
+    <section class="plan-sec" id="plan">
         <div class="container">
-            <div class="plan-top">
-                <div class="cmn-top-head">
+            <div class="plan-top"data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1400">
+                <div class="cmn-top-head"data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1600">
                     <div></div>
                     <p style="color: black;">PRICING PLAN</p>
                     <div></div>
                 </div>
-                <h2 class="cmn-head">Choose The <span>Perfect Plan</span> For Your EV</h2>
+                <h2 class="cmn-head"data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1600">Choose The <span>Perfect Plan</span> For Your EV</h2>
             </div>
             <div class="bottom-plan">
                 <div class="row">
                     <div class="col-4">
-                        <div class="plan-card">
+                        <div class="plan-card"data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                            data-aos-duration="2200">
                             <h3>Monthly Plan</h3>
                             <p><span>₹3599</span> / month</p>
                             <p>This plan is designed for single user</p>
                             <p>For those user who drives their EV less than
                                 five hundred kilometers per month </p>
                             <p>Features:</p>
-                            <p>Access all local charging stations</p>
-                            <p>Monthly 2 free services </p>
-                            <p>Free 1 full car wash and tuning </p>
-                            <p>Interior dusting and cleaning</p>
+                            <p><i class="fa-regular fa-square-check"></i>Access all local charging stations</p>
+                            <p><i class="fa-regular fa-square-check"></i>Monthly 2 free services </p>
+                            <p><i class="fa-regular fa-square-check"></i>Free 1 full car wash and tuning </p>
+                            <p><i class="fa-regular fa-square-check"></i>Interior dusting and cleaning</p>
                             <a href="">Choose Plan</a>
                         </div>
                     </div>
                     <div class="col-4">
-                        <div class="plan-card">
+                        <div class="plan-card"data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                            data-aos-duration="2200">
                             <h3>Quaterly Plan</h3>
                             <p><span>₹9999</span> / month</p>
                             <p>This plan is designed for single user</p>
                             <p>For those user who drives their EV less than
                                 five hundred kilometers per month</p>
                             <p>Features:</p>
-                            <p>Access all local charging stations</p>
-                            <p>Monthly 5 free services </p>
-                            <p>Free 4 full car wash and tuning </p>
-                            <p>Interior dusting and cleaning</p>
+                            <p><i class="fa-regular fa-square-check"></i>Access all local charging stations</p>
+                            <p><i class="fa-regular fa-square-check"></i>Monthly 5 free services </p>
+                            <p><i class="fa-regular fa-square-check"></i>Free 4 full car wash and tuning </p>
+                            <p><i class="fa-regular fa-square-check"></i>Interior dusting and cleaning</p>
                             <a href="">Choose Plan</a>
                         </div>
                     </div>
                     <div class="col-4">
-                        <div class="plan-card">
+                        <div class="plan-card"data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                            data-aos-duration="2200">
                             <h3>Yearly Plan</h3>
                             <p><span>₹29999</span> / month</p>
                             <p>This plan is designed for single user</p>
                             <p>For those user who drives their EV less than
                                 five hundred kilometers per month</p>
                             <p>Features:</p>
-                            <p>Access all local charging stations</p>
-                            <p>Monthly 12 free services </p>
-                            <p>Free 12 full car wash and tuning </p>
-                            <p>Interior dusting and cleaning</p>
+                            <p><i class="fa-regular fa-square-check"></i>Access all local charging stations</p>
+                            <p><i class="fa-regular fa-square-check"></i>Monthly 12 free services </p>
+                            <p><i class="fa-regular fa-square-check"></i>Free 12 full car wash and tuning </p>
+                            <p><i class="fa-regular fa-square-check"></i>Interior dusting and cleaning</p>
                             <a href="">Choose Plan</a>
                         </div>
                     </div>
@@ -639,16 +660,16 @@
     <section class="team-sec">
         <div class="container">
             <div class="team-top">
-                <div class="cmn-top-head">
+                <div class="cmn-top-head"data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1400">
                     <div></div>
                     <p style="color: #ffffff;">Our Team</p>
                     <div></div>
                 </div>
-                <h2 class="cmn-head">Meet The Brains</h2>
-                <p class="cmn-para">These people works very hard to make our services more easier and accessable</p>
+                <h2 class="cmn-head"data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1400">Meet The Brains</h2>
+                <p class="cmn-para"data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1400">These people works very hard to make our services more easier and accessable</p>
             </div>
             <div class="team-bottom">
-                <div class="swiper">
+                <div class="swiper" id="swiper1">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="team-card">
@@ -658,9 +679,9 @@
                                 <h3>Mahesh Soni</h3>
                                 <p>Founder</p>
                                 <div class="team-soc">
-                                    <a href=""><img src="./img/Facebook.png" alt=""></a>
-                                    <a href=""> <img src="./img/Twitter Circled.png" alt=""></a>
-                                    <a href=""> <img src="./img/LinkedIn Circled.png" alt=""></a>
+                                    <a class="facebook" href=""><img src="./img/Facebook.png" alt=""></a>
+                                    <a class="twitter" href=""> <img src="./img/Twitter Circled.png" alt=""></a>
+                                    <a class="linkedin" href=""> <img src="./img/LinkedIn Circled.png" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -672,9 +693,9 @@
                                 <h3>Mike Paul</h3>
                                 <p>CEO</p>
                                 <div class="team-soc">
-                                    <a href=""><img src="./img/Facebook.png" alt=""></a>
-                                    <a href=""> <img src="./img/Twitter Circled.png" alt=""></a>
-                                    <a href=""> <img src="./img/LinkedIn Circled.png" alt=""></a>
+                                    <a class="facebook" href=""><img src="./img/Facebook.png" alt=""></a>
+                                    <a class="twitter" href=""> <img src="./img/Twitter Circled.png" alt=""></a>
+                                    <a class="linkedin" href=""> <img src="./img/LinkedIn Circled.png" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -686,9 +707,9 @@
                                 <h3>Abhinash Singh</h3>
                                 <p>Team Lead</p>
                                 <div class="team-soc">
-                                    <a href=""><img src="./img/Facebook.png" alt=""></a>
-                                    <a href=""> <img src="./img/Twitter Circled.png" alt=""></a>
-                                    <a href=""> <img src="./img/LinkedIn Circled.png" alt=""></a>
+                                    <a class="facebook" href=""><img src="./img/Facebook.png" alt=""></a>
+                                    <a class="twitter" href=""> <img src="./img/Twitter Circled.png" alt=""></a>
+                                    <a class="linkedin" href=""> <img src="./img/LinkedIn Circled.png" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -700,15 +721,15 @@
                                 <h3>Hema Kapi</h3>
                                 <p>CTO</p>
                                 <div class="team-soc">
-                                    <a href=""><img src="./img/Facebook.png" alt=""></a>
-                                    <a href=""> <img src="./img/Twitter Circled.png" alt=""></a>
-                                    <a href=""> <img src="./img/LinkedIn Circled.png" alt=""></a>
+                                    <a class="facebook" href=""><img src="./img/Facebook.png" alt=""></a>
+                                    <a class="twitter" href=""> <img src="./img/Twitter Circled.png" alt=""></a>
+                                    <a class="linkedin" href=""> <img src="./img/LinkedIn Circled.png" alt=""></a>
                                 </div>
                             </div>
                         </div>
                         ...
                     </div>
-                    <div class="swiper-pagination"></div>
+                    <div class="swiper-pagination" id="swiper-pagination1"></div>
                 </div>
 
             </div>
@@ -718,14 +739,24 @@
     <!-- client revew sec -->
     <section class="client-sec">
         <div class="container">
-            <h2>Testimonials</h2>
+            <h2 data-aos="fade-left"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">Testimonials</h2>
             <div class="row">
                 <div class="col-6">
-                    <div class="client-left">
-                        <img src="./img/Quote-reverse.png" alt="">
-                        <p>Testimonials</p>
-                        <h3>Clients Love</h3>
-                        <p>Keeping your car in top shape requires more than just occasional washing. Regular car
+                    <div class="client-left"data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1400">
+                        <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1400">
+                            <img src="./img/Quote-reverse.png" alt="">
+                        </div>
+                        <p data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">Testimonials</p>
+                        <h3 data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">Clients Love</h3>
+                        <p data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">Keeping your car in top shape requires more than just occasional washing. Regular car
                             detailing</p>
                     </div>
                 </div>
@@ -752,7 +783,7 @@
                                         <a href="">Read full story</a>
                                     </div>
                                 </div>
-                                <div class="swiper-slide2">
+                                <div class="swiper-slide">
                                     <div class="client-card">
                                         <div>
                                             <img src="./img/client-2.png" alt="">
@@ -770,15 +801,15 @@
                                         <a href="">Read full story</a>
                                     </div>
                                 </div>
+                                ...
                             </div>
+                            <div class="swiper-pagination" id="swiper-pagination2"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-
 
     <!-- Questions sec -->
 
@@ -811,32 +842,41 @@
                         <p class="cmn-para">The time it takes to paint a car repair depends on various factors, such as
                             the extent of
                             damage, thesize of the area to be painted.</p>
-                        <div>
+                        <div class="flip">
                             <h4>1. How do repair takes on a car ?</h4>
-                            <i class="fa-solid fa-greater-than"></i>
+                            <i class="fa-solid fa-greater-than arrow"></i>
                         </div>
-                        <p class="cmn-para">The time it takes to paint a car repair depends on various factors, such as the extent of
-                            damage, the size of the area to be painted, the type of paint used</p>
-                        <div>
+                        <p class="cmn-para panel">The time it takes to paint a car repair depends on various
+                            factors, such as
+                            the extent of damage, the size of the area to be painted, the type of paint used</p>
+                        <div class="flip">
                             <h4>2. Can I get full service in two days ?</h4>
-                            <i class="fa-solid fa-greater-than"></i>
+                            <i class="fa-solid fa-greater-than arrow"></i>
                         </div>
-                        <p class="cmn-para"></p>
-                        <div>
+                        <p class="cmn-para panel">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est odit
+                            dolores dolor facilis qui unde repellendus ullam ipsa assumenda sunt, iure, fugiat nobis
+                            harum porro ad ratione in neque vel?</p>
+                        <div class="flip">
                             <h4>3. Do you sell speare parts ?</h4>
-                            <i class="fa-solid fa-greater-than"></i>
+                            <i class="fa-solid fa-greater-than arrow"></i>
                         </div>
-                        <p class="cmn-para"></p>
-                        <div>
+                        <p class="cmn-para panel">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                            doloremque sunt debitis quia nisi quis quas laboriosam, recusandae voluptatum soluta quod
+                            minus cumque consectetur quae quibusdam consequuntur obcaecati perspiciatis in.</p>
+                        <div class="flip">
                             <h4>4. Do you deliver car at home ?</h4>
-                            <i class="fa-solid fa-greater-than"></i>
+                            <i class="fa-solid fa-greater-than arrow"></i>
                         </div>
-                        <p class="cmn-para"></p>
-                        <div>
+                        <p class="cmn-para panel">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit
+                            ipsum a saepe commodi voluptatum consectetur dolorem. Error dolorum qui numquam repellat
+                            tempora neque autem omnis, nemo ullam laudantium excepturi obcaecati!</p>
+                        <div class="flip">
                             <h4>5. How long does it take to dry a full paint ?</h4>
-                            <i class="fa-solid fa-greater-than"></i>
+                            <i class="fa-solid fa-greater-than arrow"></i>
                         </div>
-                        <p class="cmn-para"></p>
+                        <p class="cmn-para panel">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+                            maiores itaque facere iusto. Ipsum officiis earum, nihil saepe itaque porro repudiandae
+                            neque veniam. Cum, doloremque? Quis iusto harum repellat nihil.</p>
                     </div>
                 </div>
             </div>
@@ -859,13 +899,13 @@
                             your EV needs, we provide comprehensive service.
                         </p>
                         <div class="social">
-                            <a href="">
+                            <a class="facebook" href="">
                                 <img src="./img/footer-soc1.png" alt="">
                             </a>
-                            <a href="">
+                            <a class="twitter" href="">
                                 <img src="./img/footer-soc2.png" alt="">
                             </a>
-                            <a href="">
+                            <a class="linkedin" href="">
                                 <img src="./img/footer-soc3.png" alt="">
                             </a>
                         </div>
@@ -902,19 +942,34 @@
                         <a href=""><i class="fa-solid fa-phone"></i>+033 2645 3265</a>
                         <a href=""><i class="fa-solid fa-location-dot"></i>32/b AJC Bose Road kolkata 700002</a>
                         <a href=""><i class="fa-solid fa-envelope"></i>serviceevnext@info.in</a>
-                        <a href=""></a>
-                        <a href=""></a>
-                        <a href=""></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- footer bottom -->
 
+    <section class="footer-bottom-sec">
+        <div class="container">
+            <div class="footer-bottom-main">
+                <div>
+                    <p>©2025 All Rights Reserved By <span>EV NEXT</span>.</p>
+                </div>
+                <div>
+                    <a href="">Privacy Policy </a>
+                    <p>|</p>
+                    <a href="">Trems & Condition</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- swiper js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
     <!-- js -->
     <script src="./js/index.js"></script>
 
