@@ -12,6 +12,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- swiper js -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- LightBox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
+
     <!-- css -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -169,7 +172,8 @@
                     <div></div>
                 </div>
                 <h2 class="cmn-head" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">Most
-                    <span>Reliable</span> EV Repair & Services</h2>
+                    <span>Reliable</span> EV Repair & Services
+                </h2>
                 <p class="cmn-para" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">EV NEXT
                     provides expert maintenance , fast repairs & hassle-free charging to keep
                     your electric journey smooth and sustainable</p>
@@ -237,10 +241,8 @@
 
     <!-- achive section -->
 
-    <section class="achive-sec" id="achive-sec"data-aos="fade-zoom-in"
-     data-aos-easing="ease-in-back"
-     data-aos-delay="300"
-     data-aos-offset="0">
+    <section class="achive-sec" id="achive-sec" data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+        data-aos-delay="300" data-aos-offset="0">
         <div class="container">
             <div class="row">
                 <div class="col-3">
@@ -295,25 +297,29 @@
                             <p style="color: black;">WHY CHOOSE US</p>
                             <div></div>
                         </div>
-                        <h2 class="cmn-head" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000"><span>Charging Up</span> Convenience , One Service at a Time</h2>
-                        <p class="cmn-para" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">You'd think after creating the world's largest and most open EV charging
+                        <h2 class="cmn-head" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
+                            <span>Charging Up</span> Convenience , One Service at a Time
+                        </h2>
+                        <p class="cmn-para" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">You'd
+                            think after creating the world's largest and most open EV charging
                             network we’d be
                             satisfied, but you'd be wrong, there’s still much more we can do together. After more than a
                             decade and millions of charges delivered, we’re still pioneering new ways to make electric
                             mobility the easy choice.
                         </p>
-                        <div class="video-btn" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
-                            <div>
+                        <div class="video-btn" id="video" data-aos="fade-up" data-aos-easing="linear"
+                            data-aos-duration="1000">
+                            <a href="https://youtu.be/7X8II6J-6mU?si=Kc6yyEdG73lVZrcE" data-fancybox="gallery">
                                 <img src="./img/play-btn.png" alt="">
-                            </div>
-                            <p>VIDEO SHOWCASE</p>
+                            </a>
+                            <p id="#video">VIDEO SHOWCASE</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="choose-right">
                         <div>
-                            <div  class="card-1" style="color: #ffffff;">
+                            <div class="card-1" style="color: #ffffff;">
                                 <img src="./img/Online Support.png" alt="">
                                 <h3>24/7 Support</h3>
                                 <p>Get instant support 24 / 7 anytime anywhere</p>
@@ -349,8 +355,10 @@
             <div class="row">
                 <div class="col-6">
                     <div class="booking-left" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
-                        <h2 class="cmn-head" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1200">Don't Worry ,<span> Just 3 Simple</span> Steps For Appointment</h2>
-                        <p class="cmn-para" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1200">At EV NEXT, we're driving the future of electric mobility. As a stop
+                        <h2 class="cmn-head" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1200">Don't
+                            Worry ,<span> Just 3 Simple</span> Steps For Appointment</h2>
+                        <p class="cmn-para" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1200">At EV
+                            NEXT, we're driving the future of electric mobility. As a stop
                             destination for all your EV needs .
                         </p>
                         <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
@@ -392,37 +400,38 @@
                     </div>
                 </div>
                 <div class="col-6">
-                    <div class="booking-right"data-aos="flip-left"
-     data-aos-easing="ease-out-cubic"
-     data-aos-duration="2000">
+                    <div class="booking-right" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000">
                         <div class="booking-card">
                             <h4>Book An Appointment</h4>
                             <img style="margin-bottom: 20px;margin-top: 10px;" src="./img/Rectangle.png" alt="">
                             <div>
-                                <input type="text" placeholder="Name">
-                                <input type="email" placeholder="Email">
+                                <input type="text" placeholder="Name" required>
+                                <input type="email" placeholder="Email" required>
                             </div>
                             <div>
-                                <input type="tel" placeholder="Phone">
-                                <input type="text" placeholder="Brand">
+                                <input type="tel" placeholder="Phone" required>
+                                <input type="text" placeholder="Brand" required>
                             </div>
                             <div>
-                                <input type="date" placeholder="">
-                                <input type="text" placeholder="Select Service">
+                                <input type="date" placeholder="dd/mm/yyyy" required>
+                                <input type="service" placeholder="Select Service" required>
                             </div>
                             <div>
-                                <input type="text" placeholder="Pick-Up Address">
+                                <input type="pickup" placeholder="Pick-Up Address" required>
                             </div>
                             <div>
                                 <div>
                                     <p>Do you have any plan ?</p>
-                                    <input type="radio" name="true-false">Yes
-                                    <input type="radio" name="true-false">no
+                                    <label for="">
+                                        <input type="radio" name="true-false">yes
+                                        <input type="radio" name="true-false">no
+                                    </label>
                                 </div>
                                 <a href="">Check Estimate </a>
                             </div>
                             <div class="submit-btm">
-                                <a href="">Submit Now</a>
+                                <a type="Submit" href="">Submit Now</a>
                             </div>
 
                             <p> <span class="note">Note</span>: A wonderful serenity taken possession into entire soul
@@ -439,19 +448,18 @@
 
     <section class="process-sec">
         <div class="container">
-            <div class="process-top"data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1400">
-                <div class="cmn-top-head"data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1400">
+            <div class="process-top" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1400">
+                <div class="cmn-top-head" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1400">
                     <div></div>
                     <p style="color: #000000;">PROCESS</p>
                     <div></div>
                 </div>
-                <h2 class="cmn-head"data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1400">How we works</h2>
+                <h2 class="cmn-head" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1400">How we works
+                </h2>
                 <img src="./img/Rectangle.png" alt="">
             </div>
-            <div class="bottom-process"data-aos="fade-zoom-in"
-     data-aos-easing="ease-in-back"
-     data-aos-delay="500"
-     data-aos-offset="0">
+            <div class="bottom-process" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="500"
+                data-aos-offset="0">
                 <div class="row">
                     <div class="col-3">
                         <div class="proces-card">
@@ -592,18 +600,20 @@
 
     <section class="plan-sec" id="plan">
         <div class="container">
-            <div class="plan-top"data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1400">
-                <div class="cmn-top-head"data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1600">
+            <div class="plan-top" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1400">
+                <div class="cmn-top-head" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1600">
                     <div></div>
                     <p style="color: black;">PRICING PLAN</p>
                     <div></div>
                 </div>
-                <h2 class="cmn-head"data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1600">Choose The <span>Perfect Plan</span> For Your EV</h2>
+                <h2 class="cmn-head" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1600">Choose The
+                    <span>Perfect Plan</span> For Your EV
+                </h2>
             </div>
             <div class="bottom-plan">
                 <div class="row">
                     <div class="col-4">
-                        <div class="plan-card"data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                        <div class="plan-card" data-aos="flip-left" data-aos-easing="ease-out-cubic"
                             data-aos-duration="2200">
                             <h3>Monthly Plan</h3>
                             <p><span>₹3599</span> / month</p>
@@ -619,7 +629,7 @@
                         </div>
                     </div>
                     <div class="col-4">
-                        <div class="plan-card"data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                        <div class="plan-card" data-aos="flip-left" data-aos-easing="ease-out-cubic"
                             data-aos-duration="2200">
                             <h3>Quaterly Plan</h3>
                             <p><span>₹9999</span> / month</p>
@@ -635,7 +645,7 @@
                         </div>
                     </div>
                     <div class="col-4">
-                        <div class="plan-card"data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                        <div class="plan-card" data-aos="flip-left" data-aos-easing="ease-out-cubic"
                             data-aos-duration="2200">
                             <h3>Yearly Plan</h3>
                             <p><span>₹29999</span> / month</p>
@@ -660,13 +670,15 @@
     <section class="team-sec">
         <div class="container">
             <div class="team-top">
-                <div class="cmn-top-head"data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1400">
+                <div class="cmn-top-head" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1400">
                     <div></div>
                     <p style="color: #ffffff;">Our Team</p>
                     <div></div>
                 </div>
-                <h2 class="cmn-head"data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1400">Meet The Brains</h2>
-                <p class="cmn-para"data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1400">These people works very hard to make our services more easier and accessable</p>
+                <h2 class="cmn-head" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1400">Meet The
+                    Brains</h2>
+                <p class="cmn-para" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1400">These people
+                    works very hard to make our services more easier and accessable</p>
             </div>
             <div class="team-bottom">
                 <div class="swiper" id="swiper1">
@@ -730,6 +742,8 @@
                         ...
                     </div>
                     <div class="swiper-pagination" id="swiper-pagination1"></div>
+                    <div class="swiper-button-prev" id="swiper-button-prev1"></div>
+                    <div class="swiper-button-next" id="swiper-button-next1"></div>
                 </div>
 
             </div>
@@ -739,24 +753,17 @@
     <!-- client revew sec -->
     <section class="client-sec">
         <div class="container">
-            <h2 data-aos="fade-left"
-     data-aos-offset="300"
-     data-aos-easing="ease-in-sine">Testimonials</h2>
+            <h2 data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">Testimonials</h2>
             <div class="row">
                 <div class="col-6">
-                    <div class="client-left"data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1400">
+                    <div class="client-left" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1400">
                         <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1400">
                             <img src="./img/Quote-reverse.png" alt="">
                         </div>
-                        <p data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500">Testimonials</p>
-                        <h3 data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500">Clients Love</h3>
-                        <p data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500">Keeping your car in top shape requires more than just occasional washing. Regular car
+                        <p data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">Testimonials</p>
+                        <h3 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">Clients Love</h3>
+                        <p data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">Keeping your car in
+                            top shape requires more than just occasional washing. Regular car
                             detailing</p>
                     </div>
                 </div>
@@ -801,9 +808,10 @@
                                         <a href="">Read full story</a>
                                     </div>
                                 </div>
-                                ...
                             </div>
                             <div class="swiper-pagination" id="swiper-pagination2"></div>
+                            <div class="swiper-button-prev" id="swiper-button-prev2"></div>
+                            <div class="swiper-button-next" id="swiper-button-next2"></div>
                         </div>
                     </div>
                 </div>
@@ -970,6 +978,8 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- swiper js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+     <!-- LightBox -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     <!-- js -->
     <script src="./js/index.js"></script>
 

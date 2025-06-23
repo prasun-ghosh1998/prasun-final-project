@@ -1,6 +1,6 @@
 
 
-  AOS.init();
+AOS.init();
 
 
 // scrolling sec
@@ -20,10 +20,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const navcontent = document.querySelector(".nav-content");
 
 function openNav() {
-  if (navcontent.style.width === "50vh") {
-    sidebar.style.width = "0";
+  const screenWidth = window.innerWidth;
+
+  if (screenWidth <= 767) {
+    // Mobile screen
+    navcontent.style.width = "100vw";
   } else {
-    navcontent.style.width = "54vh";
+    // Desktop/tablet
+    navcontent.style.width = "54vw";
   }
 }
 
@@ -33,26 +37,27 @@ function closeNav() {
 
 // counter sec
 
- const counters = document.querySelectorAll('.counter');
+const counters = document.querySelectorAll('.counter');
 
-  const speed = 300; // lower is faster
+const speed = 300; // lower is faster
 
-  counters.forEach(counter => {
-    const animate = () => {
-      const target = +counter.getAttribute('data-target');
-      const count = +counter.innerText.replace(/\D/g, ''); // remove non-digits
-      const increment = target / speed;
+counters.forEach(counter => {
+  const animate = () => {
+    const target = +counter.getAttribute('data-target');
+    const count = +counter.innerText.replace(/\D/g, ''); // remove non-digits
+    const increment = target / speed;
 
-      if (count < target) {
-        counter.innerText = Math.ceil(count + increment) + (target >= 1000 ? 'k' : '+');
-        setTimeout(animate, 20);
-      } else {
-        counter.innerText = target + (target >= 1000 ? 'k' : '+');
-      }
-    };
+    if (count < target) {
+      counter.innerText = Math.ceil(count + increment) + (target >= 1000 ? 'k' : '+');
+      setTimeout(animate, 20);
+    } else {
+      counter.innerText = target + (target >= 1000 ? 'k' : '+');
+    }
+  };
 
-    animate();
-  });
+  animate();
+});
+
 
 
 // team sec
@@ -64,25 +69,29 @@ const swiper1 = new Swiper('#swiper1', {
   pagination: {
     el: '#swiper-pagination1',
   },
-    autoplay: {
-      delay: 2300,
-    },
+  navigation: {
+    nextEl: '#swiper-button-next1',
+    prevEl: '#swiper-button-prev1',
+  },
+  autoplay: {
+    delay: 2300,
+  },
 
   breakpoints: {
-    1440:{
+    1440: {
       slidesPerView: 3,
     },
-    1024:{
+    1024: {
       slidesPerView: 3,
     },
-    973:{
+    973: {
       slidesPerView: 3,
     },
-    768:{
+    768: {
       slidesPerView: 2,
       spaceBetween: 30,
     },
-    425:{
+    425: {
       slidesPerView: 1,
       spaceBetween: 30,
     },
@@ -103,18 +112,23 @@ const swiper2 = new Swiper('#swiper2', {
   pagination: {
     el: '#swiper-pagination2',
   },
-    autoplay: {
-      delay: 2600,
-    },
+  navigation: {
+    nextEl: '#swiper-button-next2',
+    prevEl: '#swiper-button-prev2',
+  },
+  autoplay: {
+    delay: 2600,
+  },
 
 });
 
 
 // FAQ Jquery
 
-$(document).ready(function(){
-  $(".flip").click(function(){
+$(document).ready(function () {
+  $(".flip").click(function () {
     $(this).next(".panel").slideToggle("slow");
+    
     $(this).find(".arrow").toggleClass("rotate");
   });
 });
