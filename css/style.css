@@ -7,7 +7,8 @@
     box-sizing: border-box;
 }
 
-html,body {
+html,
+body {
     scroll-behavior: smooth;
 }
 
@@ -219,12 +220,17 @@ span {
 
 .top-nav-main,
 .nav-main,
-.nav-content,
 .nav-content>ul,
 .nav-btn {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    gap: 100px;
 }
 
 .nav-bottom {
@@ -1634,6 +1640,54 @@ span {
     color: transparent;
 }
 
+/* app sec */
+
+.app-sec {
+    background: url("../img/app-bg.png") no-repeat center/cover;
+    position: relative;
+    padding: 128px 0px;
+}
+
+.app-left>h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    max-width: 719px;
+    margin-bottom: 58px;
+}
+
+.app-left>div {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+.app-left>div>a {
+    max-width: 203px;
+    height: fit-content;
+}
+
+.app-left>div>a>img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.app-right {
+    position: absolute;
+    bottom: 75px;
+    right: 221px;
+    max-width: 271px;
+    height: fit-content;
+}
+
+.app-right>img {
+
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 /* footer sec */
 
 .footer-sec {
@@ -1846,6 +1900,16 @@ span {
         right: 190px;
     }
 
+    /* app */
+
+    .app-left>h2 {
+        font-size: 43px;
+    }
+
+    .app-right {
+        right: 40px;
+        max-width: 258px;
+    }
 }
 
 @media screen and (max-width:997px) {
@@ -1924,7 +1988,7 @@ span {
         padding-top: 89px;
         padding-bottom: 154px;
         background-color: #000000;
-        gap: 0px;
+        gap: 15px;
         position: absolute;
         width: 0;
         top: -1px;
@@ -1932,7 +1996,7 @@ span {
         overflow-x: hidden;
         transition: 0.3s;
         z-index: 100;
-        min-height: 96vh;
+        height: 96vh;
     }
 
     .hamberger,
@@ -2236,7 +2300,8 @@ span {
     /* question left */
 
     .ques-sec {
-        padding: 80px 0px;
+        padding-top: 80px;
+        padding-bottom: 42px;
     }
 
     .ques-sec>div>div:last-child {
@@ -2251,6 +2316,35 @@ span {
 
     .ques-right>h2 {
         text-align: center;
+    }
+
+    /* app */
+
+    .app-sec {
+        padding: 50px 0px;
+    }
+    .app-sec>div>div{
+        row-gap: 20px;
+    }
+    .app-left{
+        justify-items: center;
+    }
+
+    .app-left>h2 {
+        text-align: center;
+        font-size: 33px;
+        margin-bottom: 35px;
+    }
+    .app-left>div>a {
+    max-width: 170px;
+}
+
+    .app-right {
+        position: relative;
+        right: 0;
+        bottom: 0;
+        margin: 0 auto;
+        max-width: 206px;
     }
 
     /* footer sec */
@@ -2672,6 +2766,12 @@ span {
         margin-top: 16px;
     }
 
+    /* app */
+
+        .app-left>h2 {
+        font-size: 27px;
+        }
+
     /* footer */
 
     .footer-sec {
@@ -2757,7 +2857,8 @@ span {
         font-size: 20px;
         right: 353px;
     }
-    .nav-content{
+
+    .nav-content {
         padding-bottom: 241px;
     }
 
@@ -3109,7 +3210,8 @@ span {
     /* question  */
 
     .ques-sec {
-        padding: 64px 0px;
+        padding-top: 64px;
+        padding-bottom: 30px;
     }
 
     .ques-left>div>h3 {
@@ -3149,6 +3251,15 @@ span {
     .ques-right>p {
         margin-top: 9px;
         margin-bottom: 26px;
+    }
+
+    /* app */
+
+    .app-left>h2 {
+        font-size: 21px;
+    }
+        .app-right {
+        max-width: 144px;
     }
 
     /* footer */
@@ -3226,99 +3337,111 @@ span {
         font-size: 13px;
     }
 
-        /* about */
+    /* about */
 
-        .about-img {
-            max-width: 227px;
-        }
-
-        .about-left>div:nth-child(3) {
-            top: 96px;
-            left: 87px;
-            width: 227px;
-            height: 210px;
-        }
-
-        .about-left>div:nth-child(4) {
-            left: 26px;
-        }
-
-        .about-service>div {
-            max-width: 184px;
-        }
-
-
-        /* location */
-
-        .right-location>div>div {
-            padding: 11px 7px 11px 5px;
-            width: 100%;
-        }
-
-        /* team */
-
-        #swiper-button-prev1 {
-            left: 100px;
-        }
-
-        #swiper-button-next1 {
-            right: 100px;
-        }
-
-        /* client */
-
-        #swiper-button-prev2 {
-            left: 123px;
-        }
-
-        #swiper-button-next2 {
-            right: 123px;
-        }
-
+    .about-img {
+        max-width: 227px;
     }
 
-    @media screen and (max-width:320px) {
-
-        /* nav */
-        .top-nav {
-            padding: 4px 0px;
-        }
-
-        .nav-bottom {
-            top: 51px;
-        }
-
-        .close-bar {
-            right: 273px;
-        }
-
-        /* about */
-        .about-left>div:nth-child(3) {
-            top: 96px;
-            left: 62px;
-        }
-
-        .about-left>div:nth-child(4) {
-            left: 4px;
-        }
-
-        /* team */
-
-        #swiper-button-prev1 {
-            left: 75px;
-        }
-
-        #swiper-button-next1 {
-            right: 75px;
-        }
-
-        /* client */
-
-        #swiper-button-prev2 {
-            left: 97px;
-        }
-
-        #swiper-button-next2 {
-            right: 97px;
-        }
+    .about-left>div:nth-child(3) {
+        top: 96px;
+        left: 87px;
+        width: 227px;
+        height: 210px;
     }
+
+    .about-left>div:nth-child(4) {
+        left: 26px;
+    }
+
+    .about-service>div {
+        max-width: 184px;
+    }
+
+
+    /* location */
+
+    .right-location>div>div {
+        padding: 11px 7px 11px 5px;
+        width: 100%;
+    }
+
+    /* team */
+
+    #swiper-button-prev1 {
+        left: 100px;
+    }
+
+    #swiper-button-next1 {
+        right: 100px;
+    }
+
+    /* client */
+
+    #swiper-button-prev2 {
+        left: 123px;
+    }
+
+    #swiper-button-next2 {
+        right: 123px;
+    }
+
+    /* app */
+
+    .app-sec{
+        padding:30px;
+    }
+    .app-left>h2 {
+        font-size: 17px;
+    }
+        .app-right {
+        max-width: 126px;
+    }
+
+}
+
+@media screen and (max-width:320px) {
+
+    /* nav */
+    .top-nav {
+        padding: 4px 0px;
+    }
+
+    .nav-bottom {
+        top: 51px;
+    }
+
+    .close-bar {
+        right: 273px;
+    }
+
+    /* about */
+    .about-left>div:nth-child(3) {
+        top: 96px;
+        left: 62px;
+    }
+
+    .about-left>div:nth-child(4) {
+        left: 4px;
+    }
+
+    /* team */
+
+    #swiper-button-prev1 {
+        left: 75px;
+    }
+
+    #swiper-button-next1 {
+        right: 75px;
+    }
+
+    /* client */
+
+    #swiper-button-prev2 {
+        left: 97px;
+    }
+
+    #swiper-button-next2 {
+        right: 97px;
+    }
+}

@@ -29,36 +29,55 @@ function openNav() {
   } else {
     // Desktop/tablet
     navcontent.style.width = "54vw";
+    document.body.style.overflow = "hidden";
   }
 }
 
 function closeNav() {
   navcontent.style.width = "0";
-   document.body.style.overflow = "auto";
+  document.body.style.overflow = "auto";
 }
 
 // counter sec
 
 const counters = document.querySelectorAll('.counter');
 
-const speed = 300; // lower is faster
+const startCounting = (counter) => {
+  const target = +counter.getAttribute('data-target');
+  const isK = target >= 1000;
+  const suffix = isK ? 'k' : '+';
+  const speed = 400;
 
-counters.forEach(counter => {
   const animate = () => {
-    const target = +counter.getAttribute('data-target');
-    const count = +counter.innerText.replace(/\D/g, ''); // remove non-digits
-    const increment = target / speed;
+    let count = +counter.innerText.replace(/\D/g, '');
+    const increment = Math.ceil(target / speed);
 
     if (count < target) {
-      counter.innerText = Math.ceil(count + increment) + (target >= 1000 ? 'k' : '+');
+      count += increment;
+      if (count > target) count = target;
+      counter.innerText = count + suffix;
       setTimeout(animate, 20);
     } else {
-      counter.innerText = target + (target >= 1000 ? 'k' : '+');
+      counter.innerText = target + suffix;
     }
   };
 
   animate();
+};
+
+// Use IntersectionObserver
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      startCounting(entry.target);
+      observer.unobserve(entry.target); // only run once
+    }
+  });
+}, {
+  threshold: 0.6
 });
+
+counters.forEach(counter => observer.observe(counter));
 
 
 
