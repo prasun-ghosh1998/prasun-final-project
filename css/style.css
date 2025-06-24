@@ -577,7 +577,8 @@ span {
 .service-card:hover:before {
     transform: scale(5);
 }
-.service-card:hover h3{
+
+.service-card:hover h3 {
     background: linear-gradient(to top, #e3e4e1, #2f302f);
     background-clip: text;
     color: transparent;
@@ -598,13 +599,15 @@ span {
     margin-bottom: 16px;
     color: #FFFFFF;
 }
-.service-card:hover p{
+
+.service-card:hover p {
     color: #FFFFFF !important;
-     transition: transform 0.55s ease-out;
+    transition: transform 0.55s ease-out;
 }
-.service-card:hover h4{
+
+.service-card:hover h4 {
     color: #FFFFFF !important;
-     transition: transform 0.55s ease-out;
+    transition: transform 0.55s ease-out;
 }
 
 .service-card>a {
@@ -1305,6 +1308,7 @@ span {
     height: 430px !important;
     overflow: hidden;
 }
+
 #swiper-button-prev1,
 #swiper-button-next1 {
     top: 96%;
@@ -1327,14 +1331,16 @@ span {
 #swiper-button-prev1:after {
     font-size: 20px;
 }
-.swiper-pagination-bullet{
+
+.swiper-pagination-bullet {
     width: 15px;
     height: 2px;
     background-color: #F5F5F5;
-    
+
 }
-.swiper-horizontal>.swiper-pagination-bullets{
-bottom: 12px;
+
+.swiper-horizontal>.swiper-pagination-bullets {
+    bottom: 12px;
 }
 
 .team-soc>a::after {
@@ -1622,7 +1628,7 @@ bottom: 12px;
     display: none;
 }
 
-.ques-right>div>h4:hover{
+.flip.active{
     background: linear-gradient(to right, #40E193, #9EC30C);
     background-clip: text;
     color: transparent;
@@ -1675,7 +1681,6 @@ bottom: 12px;
 
 .social>a::after {
     content: "";
-    /* background: #a8cf09; */
     position: absolute;
     z-index: -1;
     left: 0;
@@ -1823,6 +1828,28 @@ bottom: 12px;
     .plan-card {
         padding: 40px 29px 46px 29px;
     }
+
+    /* team */
+    #swiper-button-prev1 {
+        left: 420px;
+    }
+
+    #swiper-button-next1 {
+        right: 420px;
+    }
+
+    #swiper-button-prev1,
+    #swiper-button-next1
+    /* client */
+
+    #swiper-button-prev2 {
+        left: 190px;
+    }
+
+    #swiper-button-next2 {
+        right: 190px;
+    }
+
 }
 
 @media screen and (max-width:997px) {
@@ -1928,7 +1955,7 @@ bottom: 12px;
     /* banner */
 
     .banner-sec {
-        padding-top: 150px;
+        padding-top: 160px;
         padding-bottom: 67px;
         min-height: 90vh;
     }
@@ -2166,11 +2193,48 @@ bottom: 12px;
         bottom: 34px !important;
     }
 
+    #swiper-button-prev1 {
+        left: 410px;
+    }
+
+    #swiper-button-next1 {
+        right: 410px;
+    }
+
+    #swiper-button-prev1,
+    #swiper-button-next1 {
+        top: 91%;
+    }
+
+    #swiper-button-prev1:after,
+    #swiper-button-next1:after {
+        font-size: 15px;
+    }
+
+
     /* client sec */
     .client-sec>div>h2 {
         font-size: 130px;
         bottom: -50px;
         left: -23px;
+    }
+
+    #swiper-button-prev2 {
+        left: 280px;
+    }
+
+    #swiper-button-next2 {
+        right: 280px;
+    }
+
+    #swiper-button-prev2,
+    #swiper-button-next2 {
+        top: 91%;
+    }
+
+    #swiper-button-prev2:after,
+    #swiper-button-next2:after {
+        font-size: 15px;
     }
 
     /* question left */
@@ -2216,7 +2280,7 @@ bottom: 12px;
     }
 
     .nav-content {
-        padding-bottom: 152px;
+        padding-bottom: 134px;
         top: 0px;
     }
 
@@ -2255,10 +2319,6 @@ bottom: 12px;
 
     /* banner sec */
 
-    .banner-sec {
-        padding-top: 100px;
-
-    }
 
     .banner-main>h1 {
         font-size: 40px;
@@ -2544,6 +2604,15 @@ bottom: 12px;
         margin-top: 22px;
     }
 
+    #swiper-button-prev1 {
+        left: 290px;
+    }
+
+    #swiper-button-next1 {
+        right: 290px;
+    }
+
+
     /* cient */
 
     .client-sec {
@@ -2576,6 +2645,14 @@ bottom: 12px;
 
     .client-card>div>div>h4 {
         font-size: 17px;
+    }
+
+    #swiper-button-prev2 {
+        left: 200px;
+    }
+
+    #swiper-button-next2 {
+        right: 200px;
     }
 
     /* question */
@@ -2686,8 +2763,8 @@ bottom: 12px;
     }
 
     .nav-content {
-        padding-bottom: 207px;
-        min-height: 92vh;
+        padding-bottom: 151px;
+        min-height: 85vh;
     }
 
     .nav-content>ul {
@@ -2706,9 +2783,7 @@ bottom: 12px;
     /* banner */
 
     .banner-sec {
-        padding-top: 80px;
-        padding-bottom: 26px;
-        min-height: 92vh;
+        min-height: 85vh;
     }
 
     .banner-main>h1 {
@@ -2875,8 +2950,6 @@ bottom: 12px;
         font-size: 9px;
     }
 
-
-
     /* location */
 
     .left-location>h2 {
@@ -2977,6 +3050,14 @@ bottom: 12px;
         gap: 14px
     }
 
+    #swiper-button-prev1 {
+        left: 128px;
+    }
+
+    #swiper-button-next1 {
+        right: 128px;
+    }
+
 
     /* client */
 
@@ -3022,6 +3103,14 @@ bottom: 12px;
 
     .client-card {
         padding: 20px 19px 20px 18px;
+    }
+
+    #swiper-button-prev2 {
+        left: 143px;
+    }
+
+    #swiper-button-next2 {
+        right: 143px;
     }
 
     /* question  */
@@ -3122,7 +3211,7 @@ bottom: 12px;
     }
 
     .nav-content {
-        padding-bottom: 236px;
+        padding-bottom: 175px;
         max-width: 100vw;
         width: 0;
     }
@@ -3165,6 +3254,26 @@ bottom: 12px;
         width: 100%;
     }
 
+    /* team */
+
+    #swiper-button-prev1 {
+        left: 100px;
+    }
+
+    #swiper-button-next1 {
+        right: 100px;
+    }
+
+    /* client */
+
+    #swiper-button-prev2 {
+        left: 123px;
+    }
+
+    #swiper-button-next2 {
+        right: 123px;
+    }
+
 }
 
 @media screen and (max-width:320px) {
@@ -3190,5 +3299,25 @@ bottom: 12px;
 
     .about-left>div:nth-child(4) {
         left: 4px;
+    }
+
+    /* team */
+
+    #swiper-button-prev1 {
+        left: 75px;
+    }
+
+    #swiper-button-next1 {
+        right: 75px;
+    }
+
+    /* client */
+
+    #swiper-button-prev2 {
+        left: 97px;
+    }
+
+    #swiper-button-next2 {
+        right: 97px;
     }
 }

@@ -128,8 +128,9 @@ const swiper2 = new Swiper('#swiper2', {
 $(document).ready(function () {
   $(".flip").click(function () {
     $(this).next(".panel").slideToggle("slow");
-    
     $(this).find(".arrow").toggleClass("rotate");
+     $(".flip").removeClass('active'); // remove active from all
+        $(this).addClass('active'); // add to clicked
   });
 });
 
