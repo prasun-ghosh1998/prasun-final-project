@@ -25,6 +25,7 @@ function openNav() {
   if (screenWidth <= 767) {
     // Mobile screen
     navcontent.style.width = "100vw";
+    document.body.style.overflow = "hidden";
   } else {
     // Desktop/tablet
     navcontent.style.width = "54vw";
@@ -33,6 +34,7 @@ function openNav() {
 
 function closeNav() {
   navcontent.style.width = "0";
+   document.body.style.overflow = "auto";
 }
 
 // counter sec
