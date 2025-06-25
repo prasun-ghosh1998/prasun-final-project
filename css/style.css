@@ -7,6 +7,13 @@
     box-sizing: border-box;
 }
 
+body.menu-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
 html,
 body {
     scroll-behavior: smooth;
@@ -2323,10 +2330,12 @@ span {
     .app-sec {
         padding: 50px 0px;
     }
-    .app-sec>div>div{
+
+    .app-sec>div>div {
         row-gap: 20px;
     }
-    .app-left{
+
+    .app-left {
         justify-items: center;
     }
 
@@ -2335,9 +2344,10 @@ span {
         font-size: 33px;
         margin-bottom: 35px;
     }
+
     .app-left>div>a {
-    max-width: 170px;
-}
+        max-width: 170px;
+    }
 
     .app-right {
         position: relative;
@@ -2768,9 +2778,9 @@ span {
 
     /* app */
 
-        .app-left>h2 {
+    .app-left>h2 {
         font-size: 27px;
-        }
+    }
 
     /* footer */
 
@@ -3258,7 +3268,8 @@ span {
     .app-left>h2 {
         font-size: 21px;
     }
-        .app-right {
+
+    .app-right {
         max-width: 144px;
     }
 
@@ -3388,13 +3399,15 @@ span {
 
     /* app */
 
-    .app-sec{
-        padding:30px;
+    .app-sec {
+        padding: 30px;
     }
+
     .app-left>h2 {
         font-size: 17px;
     }
-        .app-right {
+
+    .app-right {
         max-width: 126px;
     }
 

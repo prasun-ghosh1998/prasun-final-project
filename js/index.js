@@ -25,17 +25,17 @@ function openNav() {
   if (screenWidth <= 767) {
     // Mobile screen
     navcontent.style.width = "100vw";
-    document.body.style.overflow = "hidden";
+    document.body.classList.add("menu-open");
   } else {
     // Desktop/tablet
     navcontent.style.width = "54vw";
-    document.body.style.overflow = "hidden";
+    document.body.classList.add("menu-open");
   }
 }
 
 function closeNav() {
   navcontent.style.width = "0";
-  document.body.style.overflow = "auto";
+  document.body.classList.remove("menu-open");
 }
 
 // counter sec
@@ -87,6 +87,7 @@ const swiper1 = new Swiper('#swiper1', {
   loop: true,
   centeredSlides: true,
   spaceBetween: 30,
+  speed: 1000,
   pagination: {
     el: '#swiper-pagination1',
   },
@@ -126,9 +127,10 @@ const swiper1 = new Swiper('#swiper1', {
 
 const swiper2 = new Swiper('#swiper2', {
   loop: true,
-  // slidesPerView: 1,
+  slidesPerView: 1,
   centeredSlides: true,
-  spaceBetween: 10,
+  spaceBetween: 30,
+  speed: 1200,
 
   pagination: {
     el: '#swiper-pagination2',
@@ -138,7 +140,8 @@ const swiper2 = new Swiper('#swiper2', {
     prevEl: '#swiper-button-prev2',
   },
   autoplay: {
-    delay: 2600,
+    delay: 3000,
+    // disableOnInteraction: false,
   },
 
 });
@@ -150,8 +153,8 @@ $(document).ready(function () {
   $(".flip").click(function () {
     $(this).next(".panel").slideToggle("slow");
     $(this).find(".arrow").toggleClass("rotate");
-     $(".flip").removeClass('active'); // remove active from all
-        $(this).addClass('active'); // add to clicked
+    $(".flip").removeClass('active'); // remove active from all
+    $(this).addClass('active'); // add to clicked
   });
 });
 
