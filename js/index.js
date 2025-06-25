@@ -128,7 +128,6 @@ const swiper1 = new Swiper('#swiper1', {
 const swiper2 = new Swiper('#swiper2', {
   loop: true,
   slidesPerView: 1,
-  centeredSlides: true,
   spaceBetween: 30,
   speed: 1200,
 
@@ -141,7 +140,7 @@ const swiper2 = new Swiper('#swiper2', {
   },
   autoplay: {
     delay: 3000,
-    // disableOnInteraction: false,
+    disableOnInteraction: false,
   },
 
 });
