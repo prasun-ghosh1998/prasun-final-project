@@ -65,7 +65,7 @@
                         <div class="nav-btn">
                             <a href=""><i class="fa-solid fa-bag-shopping"></i></a>
                             <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
-                            <a href="signup.html">Sign Up</a>
+                            <button id="openSignup">Sign Up</button>
                         </div>
                         <div class="close-bar" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></div>
                     </div>
@@ -90,6 +90,42 @@
                 <p data-aos="fade-up">Discover nearby charging stations, book services, and manage your EV with ease.
                 </p>
                 <a href="#booking-sec" data-aos="fade-up">Book Now</a>
+            </div>
+            <div class="signup-overlay" id="signupOverlay">
+                <div class="signup-form">
+                    <div class="close-signup" id="closeSignup"><i class="fa-solid fa-xmark"></i></div>
+                    <a href="">
+                        <img src="./img/logo.png" alt="">
+                    </a>
+                    <h2 class="title">Sign Up</h2>
+                    <p class="message">Signup now and get full access to our app.</p>
+                    <form class="form">
+                        <div>
+                            <label>
+                                <input class="input" type="text" placeholder="" required="">
+                                <p>Firstname</p>
+                            </label>
+                            <label>
+                                <input class="input" type="text" placeholder="" required="">
+                                <p>Lastname</p>
+                            </label>
+                        </div>
+                        <label>
+                            <input class="input" type="email" placeholder="" required="">
+                            <p>Email</p>
+                        </label>
+                        <label>
+                            <input class="input" type="password" placeholder="" required="">
+                            <p>Password</p>
+                        </label>
+                        <label>
+                            <input class="input" type="password" placeholder="" required="">
+                            <p>Confirm password</p>
+                        </label>
+                        <button class="submit">Submit</button>
+                        <p class="signin">Already have an acount ? <a href="#">Signin</a> </p>
+                    </form>
+                </div>
             </div>
         </div>
     </section>

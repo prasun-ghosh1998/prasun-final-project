@@ -141,7 +141,8 @@ span {
 .left-location>div>a::after,
 .plan-card>a::after,
 .client-card>a::after,
-.submit::after {
+.submit::after,
+.submit-btm>a::after {
     content: "";
     background: #a8cf09;
     position: absolute;
@@ -160,7 +161,8 @@ span {
 .left-location>div>a:hover::after,
 .plan-card>a:hover::after,
 .client-card>a:hover::after,
-.submit:hover::after {
+.submit:hover::after,
+.submit-btm>a:hover::after {
     transform: skewX(-45deg) scale(1, 1);
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
@@ -271,7 +273,7 @@ span {
 }
 
 .nav-content {
-    gap: 100px;
+    gap: 90px;
 }
 
 .nav-content>ul {
@@ -304,16 +306,21 @@ span {
     color: #FFFFFF;
 }
 
-.nav-btn>a:nth-child(3) {
+#openSignup {
+    color: #FFFFFF;
+}
+
+#openSignup {
     padding: 9px 27px;
     border-radius: 10px;
     background: linear-gradient(to right, #40E193, #9EC30C);
     z-index: 2;
     overflow: hidden;
     position: relative;
+    border: none;
 }
 
-.nav-btn>a:nth-child(3)::after {
+#openSignup::after {
     content: "";
     background: #a8cf09;
     position: absolute;
@@ -326,7 +333,7 @@ span {
     transition: all 0.5s;
 }
 
-.nav-btn>a:nth-child(3):hover::after {
+#openSignup:hover::after {
     transform: skewX(-45deg) scale(1, 1);
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
@@ -396,6 +403,148 @@ span {
     transform: skewX(-45deg) scale(1, 1);
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
+}
+
+.signup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.856);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.signup-form>a {
+    max-width: 212px;
+    align-items: center;
+    height: fit-content;
+    background-color: #1a1a1a;
+}
+
+.signup-form>a>img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #1a1a1a;
+    color: #fff;
+    border: 1px solid #333;
+    margin: 7% auto;
+    font-family: "Montserrat", sans-serif;
+}
+
+.title {
+    background: linear-gradient(to right, #40E193, #9EC30C);
+    background-clip: text;
+    color: transparent;
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.message {
+    margin: 10px 0;
+}
+
+.message,
+.signin {
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.signin a:hover {
+    text-decoration: underline #16a35f;
+}
+
+.signin a {
+    background: linear-gradient(to right, #40E193, #9EC30C);
+    background-clip: text;
+    color: transparent;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.form>div {
+    display: flex;
+    gap: 6px;
+    max-width: 100%;
+}
+
+.form label {
+    position: relative;
+}
+
+.form label .input {
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    padding: 20px 05px 05px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+}
+
+.form label .input+p {
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown+p {
+    top: 12.5px;
+    font-size: 0.9em;
+}
+
+.form label .input:focus+p,
+.form label .input:valid+p {
+    background: linear-gradient(to right, #40E193, #9EC30C);
+    background-clip: text;
+    color: transparent;
+    top: 0px;
+    font-size: 0.7em;
+    font-weight: 600;
+}
+
+.input {
+    font-size: 15px;
+}
+
+.submit {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 18px;
+    z-index: 2;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right, #40E193, #9EC30C);
+}
+
+.signup-overlay.active {
+    display: flex;
 }
 
 /* about sec */
@@ -890,12 +1039,19 @@ span {
     margin: 0 auto;
 }
 
+.booking-card>div>a:hover {
+    color: #FFFFFF;
+}
+
 .submit-btm>a {
     display: inline-block;
     padding: 14px 80px;
     background: linear-gradient(to right, #40E193, #9EC30C);
     color: #FFFFFF;
     margin: 0 auto;
+    z-index: 2;
+    position: relative;
+    overflow: hidden;
 }
 
 .booking-card>div>input,
@@ -2889,6 +3045,37 @@ span {
         margin-bottom: 24px;
     }
 
+    .signup-form {
+        margin: 22px auto;
+    }
+
+    .signup-form>a {
+        max-width: 160px;
+    }
+
+    .title {
+        font-size: 25px;
+        margin-top: 5px;
+    }
+
+    .message,
+    .signin {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .message {
+        margin: 5px 0;
+    }
+
+    .input {
+        font-size: 11px;
+    }
+
+    .submit {
+        font-size: 15px;
+    }
+
 
     /* about */
 
@@ -3337,6 +3524,10 @@ span {
 
     .banner-main>p {
         font-size: 13px;
+    }
+
+    .form>div {
+        flex-direction: column;
     }
 
     /* about */

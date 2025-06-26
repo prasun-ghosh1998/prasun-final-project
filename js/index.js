@@ -36,6 +36,24 @@ function closeNav() {
   document.body.classList.remove("menu-open");
 }
 
+// signup from
+
+const openBtn = document.getElementById("openSignup");
+const closeBtn = document.getElementById("closeSignup");
+const signupOverlay = document.getElementById("signupOverlay");
+
+openBtn.addEventListener("click", () => {
+  signupOverlay.classList.add("active");
+  
+  document.body.classList.add("no-scroll");
+  
+});
+
+closeBtn.addEventListener("click", () => {
+  signupOverlay.classList.remove("active"); // removing display:flex and because of that the display:none comes into play
+  document.body.classList.remove("no-scroll"); //removing noscroll from the body so that you can scroll the website
+});
+
 // counter sec
 
 const counters = document.querySelectorAll('.counter');
