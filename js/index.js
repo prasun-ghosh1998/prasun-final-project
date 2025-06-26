@@ -23,11 +23,9 @@ function openNav() {
   const screenWidth = window.innerWidth;
 
   if (screenWidth <= 767) {
-    // Mobile screen
     navcontent.style.width = "100vw";
     document.body.classList.add("menu-open");
   } else {
-    // Desktop/tablet
     navcontent.style.width = "54vw";
     document.body.classList.add("menu-open");
   }
@@ -127,7 +125,6 @@ const swiper1 = new Swiper('#swiper1', {
 
 const swiper2 = new Swiper('#swiper2', {
   loop: true,
-  slidesPerView: 1,
   spaceBetween: 30,
   speed: 1200,
 
@@ -140,7 +137,6 @@ const swiper2 = new Swiper('#swiper2', {
   },
   autoplay: {
     delay: 3000,
-    disableOnInteraction: false,
   },
 
 });

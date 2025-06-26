@@ -140,7 +140,8 @@ span {
 .service-card>a::after,
 .left-location>div>a::after,
 .plan-card>a::after,
-.client-card>a::after {
+.client-card>a::after,
+.submit::after {
     content: "";
     background: #a8cf09;
     position: absolute;
@@ -158,7 +159,8 @@ span {
 .service-card>a:hover::after,
 .left-location>div>a:hover::after,
 .plan-card>a:hover::after,
-.client-card>a:hover::after {
+.client-card>a:hover::after,
+.submit:hover::after {
     transform: skewX(-45deg) scale(1, 1);
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
