@@ -45,7 +45,7 @@ const signupOverlay = document.getElementById("signupOverlay");
 openBtn.addEventListener("click", () => {
   signupOverlay.classList.add("active");
   
-  document.body.classList.add("no-scroll");
+  document.body.classList.add("menu-open");
   
 });
 
