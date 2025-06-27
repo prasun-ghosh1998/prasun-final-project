@@ -51,7 +51,7 @@ openBtn.addEventListener("click", () => {
 
 closeBtn.addEventListener("click", () => {
   signupOverlay.classList.remove("active"); // removing display:flex and because of that the display:none comes into play
-  document.body.classList.remove("no-scroll"); //removing noscroll from the body so that you can scroll the website
+  document.body.classList.remove("menu-open"); //removing noscroll from the body so that you can scroll the website
 });
 
 // counter sec
